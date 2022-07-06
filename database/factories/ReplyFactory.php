@@ -18,8 +18,8 @@ class ReplyFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::inRandomOrder()->first()->id,
-            'thread_id' => Thread::inRandomOrder()->first()->id,
+            'user_id' => rand(1,5),
+            'thread_id' => rand(1,10),
             'body' => $this->faker->paragraph(),
         ];
     }
