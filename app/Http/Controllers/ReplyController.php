@@ -43,7 +43,7 @@ class ReplyController extends Controller
     {
         $thread->addReply([
             'body' => request('body'),
-            'user_id' => auth()->id,
+            'user_id' => auth()->user()->id,
         ]);
 
         return back();
